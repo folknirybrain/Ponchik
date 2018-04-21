@@ -8,7 +8,7 @@ alpha=90
 key_horizon=0;
 result_radius=global.radius_;
 jump_=20;
-	
+
 //x=global.x_
 //y=global.y_-global.radius_-100
 
