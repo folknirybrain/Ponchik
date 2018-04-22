@@ -1,11 +1,11 @@
 /// @description Create_game
 // You can write your code in this editor
-global.radius_=700;
+global.radius_=825;
 global.x_=room_width/2;
-global.y_=room_height+300;
+global.y_=room_height+600;
 global.speed_=1;
 global.sector_numb=0;
-global.max_=5;
+global.max_=3;
 instance_create_layer(global.x_,global.y_-global.radius_-150,"Instances",obj_pl);
 //instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_pie);
 wall1=instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_wall);
@@ -26,10 +26,10 @@ sector_u.sprite_index=1;
 
 sector_l=instance_create_layer(global.x_,global.y_,"Instances",obj_eath); // левая точка
 sector_l.rotation_start=270;
-sector_l.sprite_index=2;
+sector_l.sprite_index=0;
 
 sector_d=instance_create_layer(global.x_,global.y_,"Instances",obj_eath); // нижняя точка
 sector_d.rotation_start=0;
-sector_d.sprite_index=3;
+sector_d.sprite_index=1;
 
 

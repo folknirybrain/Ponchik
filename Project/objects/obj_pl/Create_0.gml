@@ -6,9 +6,6 @@ gravity_=1.5;
 vertical_speed=0;
 alpha=90
 key_horizon=0;
-result_radius=global.radius_+450;
+result_radius=global.radius_+100;
 jump_=20;
-test_=false
-//x=global.x_
-//y=global.y_-global.radius_-100
 
