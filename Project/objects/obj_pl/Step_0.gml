@@ -14,52 +14,6 @@ if(!place_meeting(x,y+1,obj_wall)){
 	}
 }
 */
-var x_future=global.x_+lengthdir_x(result_radius+vertical_speed,alpha);
-var y_future=global.y_+lengthdir_y(result_radius+vertical_speed,alpha);
-var x_future_1=global.x_+lengthdir_x(result_radius-1,alpha);
-var y_future_1=global.y_+lengthdir_y(result_radius-1,alpha);
-
-if(!place_meeting(x_future_1,y_future_1,obj_eath)){
-	vertical_speed-=gravity_
-	show_debug_message(" vert place meet"+string(vertical_speed))	
-}
-//show_debug_message(" vert standart"+string(vertical_speed))	
-if(place_meeting(x_future,y_future,obj_eath)){
-	//show_debug_message(" vert place meet"+string(vertical_speed))	
-		
-		
-	while !place_meeting(x_future_1,y_future_1,obj_eath){		
-		result_radius+=sign(vertical_speed);
-		x=global.x_+lengthdir_x(result_radius,alpha); 
-		y=global.y_+lengthdir_y(result_radius,alpha);
-		x_future_1=x;
-		y_future_1=y;		
-	}	
-		
-	vertical_speed=0;
-}
-
-
-
-
-var x_future=global.x_+lengthdir_x(result_radius+vertical_speed,alpha);
-var y_future=global.y_+lengthdir_y(result_radius+vertical_speed,alpha);
-var x_future_1=global.x_+lengthdir_x(result_radius+sign(vertical_speed),alpha);
-var y_future_1=global.y_+lengthdir_y(result_radius+sign(vertical_speed),alpha);
-
-	if(place_meeting(x_future,y_future,obj_eath)){
-		/*while place_meeting(x_future_1,y_future_1,obj_solid){		
-			result_radius+=1;
-			x=global.x_+lengthdir_x(result_radius,alpha); 
-			y=global.y_+lengthdir_y(result_radius,alpha);
-			x_future_1=x;
-			y_future_1=y;		
-			show_debug_message(" alpha "+string(alpha)+"alpha_ "+string(alpha))	
-		}	*/	
-	//	show_debug_message(" result  "+string(result_radius)+ " verical "+string(vertical_speed))	
-		//vertical_speed=0;
-	}
-	
 
 if(key_horizon>0){
 	alpha-=global.speed_;
@@ -68,9 +22,75 @@ if(key_horizon>0){
 	image_speed=0
 	alpha+=global.speed_;
 }else{
-	alpha_next_=0;
 	image_speed=1
 }
+
+
+var x_future=global.x_+lengthdir_x(result_radius+vertical_speed,alpha);
+var y_future=global.y_+lengthdir_y(result_radius+vertical_speed,alpha);
+var x_future_1=global.x_+lengthdir_x(result_radius+sign(vertical_speed),alpha);
+var y_future_1=global.y_+lengthdir_y(result_radius+sign(vertical_speed),alpha);
+
+//show_debug_message(" vert standart"+string(vertical_speed))	
+if(place_meeting(x_future,y_future,obj_eath)){
+//	show_debug_message(" vert place meet"+string(vertical_speed))	
+		//show_debug_message(" vert place meet"+string(result_radius))	
+	while !place_meeting(x_future_1,y_future_1,obj_eath){		
+		result_radius+=sign(vertical_speed);
+		//x=global.x_+lengthdir_x(result_radius,alpha); 
+		//y=global.y_+lengthdir_y(result_radius,alpha);
+		x_future_1=global.x_+lengthdir_x(result_radius,alpha); 
+		y_future_1=global.y_+lengthdir_y(result_radius,alpha);		
+		//x_future=x_future_1
+		//y_future=y_future_1
+	}
+
+	
+		/*while place_meeting(x_future_1,y_future_1,obj_eath){		
+			result_radius+=1;
+			
+			x_future_1=global.x_+lengthdir_x(result_radius,alpha); 
+			y_future_1=global.y_+lengthdir_y(result_radius,alpha);		
+			show_debug_message(" alpha "+string(result_radius)+"alpha_ "+string(alpha))	
+			*/
+	vertical_speed=0;
+	
+}
+
+//show_debug_message(" vert place meet"+string(result_radius))	
+
+if(place_meeting(global.x_+lengthdir_x(result_radius+10,alpha),global.y_+lengthdir_y(result_radius+10,alpha),obj_eath)){
+		game_restart();
+		show_debug_message(" vert place meet"+string(result_radius))	
+}
+
+var x_future=global.x_+lengthdir_x(result_radius+vertical_speed,alpha);
+var y_future=global.y_+lengthdir_y(result_radius+vertical_speed,alpha);
+var x_future_1=global.x_+lengthdir_x(result_radius+sign(vertical_speed),alpha);
+var y_future_1=global.y_+lengthdir_y(result_radius+sign(vertical_speed),alpha);
+
+	if(place_meeting(x_future,y_future,obj_eath)){
+		//show_debug_message(" result  "+string(result_radius)+ " verical "+string(vertical_speed))	
+		/*while place_meeting(x_future_1,y_future_1,obj_solid){		
+			result_radius+=1;
+			x=global.x_+lengthdir_x(result_radius,alpha); 
+			y=global.y_+lengthdir_y(result_radius,alpha);
+			x_future_1=x;
+			y_future_1=y;		
+			show_debug_message(" alpha "+string(alpha)+"alpha_ "+string(alpha))	
+		}	
+	show_debug_message(" result  "+string(result_radius)+ " verical "+string(vertical_speed))	
+		//vertical_speed=0;
+		*/
+	}
+	
+if(!place_meeting(x,y,obj_eath)){
+	//show_debug_message(" vert place meet"+string(vertical_speed))	
+	vertical_speed-=gravity_
+	//show_debug_message(" vert place meet"+string(vertical_speed))	
+}
+
+
 /*
 if(place_meeting(x_future,y_future,obj_main.wall2)&&obj_main.wall2.enable){
 		show_debug_message(string(obj_wall.enable));
