@@ -6,7 +6,7 @@ global.y_=room_height+300;
 global.speed_=1;
 global.sector_numb=0;
 global.max_=5;
-instance_create_layer(global.x_,global.y_-global.radius_-50,"Instances",obj_pl);
+instance_create_layer(global.x_,global.y_-global.radius_-150,"Instances",obj_pl);
 //instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_pie);
 wall1=instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_wall);
 //wall2=instance_create_layer(global.x_,global.y_-global.radius_+100,"Instances",obj_wall);
