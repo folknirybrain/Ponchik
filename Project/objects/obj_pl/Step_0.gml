@@ -9,14 +9,19 @@ if(!place_meeting(global.x_+lengthdir_x(result_radius-1,alpha),global.y_+lengthd
 }
 
 if(key_horizon>0){
-	alpha-=global.speed_;
+	horizontal_speed-=acceleration_	
+	horizontal_speed=clamp(horizontal_speed,0,-speed_);	
 	image_speed=2	
 }else if(key_horizon<0){
+	horizontal_speed+=acceleration_
+	horizontal_speed=clamp(abs(horizontal_speed),0,speed_);
 	image_speed=0
-	alpha+=global.speed_;
 }else{
+	horizontal_speed=lerp(horizontal_speed,0,acceleration_*1.5)
 	image_speed=1
 }
+alpha+=horizontal_speed;
+
 var x_future=global.x_+lengthdir_x(result_radius+vertical_speed,alpha);
 var y_future=global.y_+lengthdir_y(result_radius+vertical_speed,alpha);
 var x_future_1=global.x_+lengthdir_x(result_radius+sign(vertical_speed),alpha);
