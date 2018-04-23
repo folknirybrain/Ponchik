@@ -41,7 +41,7 @@ if(place_meeting(x_future,y_future,obj_eath)){
 	while place_meeting(global.x_+lengthdir_x(result_radius_local,alpha),global.y_+lengthdir_y(result_radius_local,alpha),obj_eath){		
 		result_radius_local+=1					
 		if(abs(result_radius-result_radius_local)>10){
-			game_restart();
+			//game_restart();
 		}			
 	}
 }
