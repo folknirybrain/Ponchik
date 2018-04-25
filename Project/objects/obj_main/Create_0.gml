@@ -6,15 +6,16 @@ global.y_=room_height+600;
 global.speed_=1;
 global.sector_numb=0;
 global.max_=3;
+//var DB=ds_grid_create(10,10)
 instance_create_layer(global.x_,global.y_-global.radius_-150,"Instances",obj_pl);
 //instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_pie);
 wall1=instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_wall);
 //wall2=instance_create_layer(global.x_,global.y_-global.radius_+100,"Instances",obj_wall);
 //wall2.hight_radius=-300
-instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_solid);
-wall22=instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_solid);
-wall22.height_radius=155
-wall22.alpha=270
+//instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_solid);
+//wall22=instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_solid);
+//wall22.height_radius=155
+//wall22.alpha=270
 
 sector_r=instance_create_layer(global.x_,global.y_,"Instances",obj_eath); // правая точка
 sector_r.rotation_start=90;
