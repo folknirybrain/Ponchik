@@ -23,6 +23,7 @@ txt_=file_text_open_write("level_1.txt");
 file_text_write_string(txt_,str);
 file_text_close(txt_);
 */
+
 global.DB=ds_grid_create(10,10)
 txt_2=file_text_open_read("level_1.txt");
 var string_end=file_text_read_string(txt_2);

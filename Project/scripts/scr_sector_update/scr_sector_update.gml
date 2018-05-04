@@ -10,9 +10,9 @@ if(global.sector_numb=global.max_-1){
 var i =0;
 
 i=irandom(2);
-
-	solid1=instance_create_layer(global.x_+lengthdir_x(global.radius_-50,rotation_start+50-global.DB[# i,2]),global.y_+lengthdir_y(global.radius_-50,rotation_start+50-global.DB[# i,2]),"Instances",global.DB[# i,1]);
-	solid1.alpha=rotation_start+50-global.DB[# i,2];
+solid1=instance_create_layer(global.x_,global.y_,"Instances",obj_solid1)
+//solid1=instance_create_layer(global.x_+lengthdir_x(global.radius_-50,rotation_start+50-global.DB[# i,2]),global.y_+lengthdir_y(global.radius_-50,rotation_start+50-global.DB[# i,2]),"Instances",global.DB[# i,1]);
+solid1.alpha=rotation_start+50-i*20;
 
 
 
@@ -25,3 +25,4 @@ i=irandom(2);
 
 
 show_debug_message(solid1.id)
+
