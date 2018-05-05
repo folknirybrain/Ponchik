@@ -12,7 +12,7 @@ instance_create_layer(global.x_,global.y_-global.radius_-150,"Instances",obj_pl)
 wall1=instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_wall);
 //wall2=instance_create_layer(global.x_,global.y_-global.radius_+100,"Instances",obj_wall);
 //wall2.hight_radius=-300
-instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_solid1);
+instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_solid);
 //wall22=instance_create_layer(global.x_,global.y_-global.radius_,"Instances",obj_solid);
 //wall22.height_radius=155
 //wall22.alpha=270
